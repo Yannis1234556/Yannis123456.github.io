@@ -1,5 +1,17 @@
 const gameContainer = document.getElementById('game-container');
 const duckSound = document.getElementById('duck-sound');
+const duck = document.getElementById('ducky_img');
+
+function change_duck_location() {
+  const duckRect = duck.getBoundingClientRect();
+
+  const curX = duckRect.left; // X position if left-top corner is (0,0)
+  const curY = duckRect.top;  // Y position if left-top corner is (0,0)
+
+  duck.style.left = (curX + 50).toString() + "px"; // X position
+  duck.style.top = (curY + 20).toString() + "px";  // Y position
+}
+
 
 // Generate a random position for the invisible duck
 const duckX = Math.floor(Math.random() * gameContainer.offsetWidth);
