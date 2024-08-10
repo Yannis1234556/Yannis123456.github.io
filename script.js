@@ -1,0 +1,21 @@
+const gameContainer = document.getElementById('game-container');
+const duckSound = document.getElementById('duck-sound');
+
+// Generate a random position for the invisible duck
+const duckX = Math.floor(Math.random() * gameContainer.offsetWidth);
+const duckY = Math.floor(Math.random() * gameContainer.offsetHeight);
+
+gameContainer.addEventListener('mousemove', (event) => {
+    // Calculate the distance between the mouse cursor and the duck's position
+    const distance = Math.sqrt(
+      Math.pow(event.clientX - duckX, 2) + Math.pow(event.clientY - duckY, 2)
+    );
+
+    // Adjust the volume of the sound effect based on the distance
+    const maxDistance = Math.sqrt(
+      Math.pow(gameContainer.offsetWidth, 2) + Math.pow(gameContainer.offsetHeight, 2)
+    );
+    const volume = 1 - distance / maxDistance;
+    duckSound.volume = volume;
+    duckSound.play();
+});
