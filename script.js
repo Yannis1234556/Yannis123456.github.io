@@ -8,14 +8,14 @@ function change_duck_location() {
   const curX = duckRect.left; // X position if left-top corner is (0,0)
   const curY = duckRect.top;  // Y position if left-top corner is (0,0)
 
-  duck.style.left = (curX + 50).toString() + "px"; // X position
-  duck.style.top = (curY + 20).toString() + "px";  // Y position
+  // Generate a random position for the invisible duck
+  const duckX = Math.floor(Math.random() * gameContainer.offsetWidth);
+  const duckY = Math.floor(Math.random() * gameContainer.offsetHeight);
+
+  // Set the position of the duck
+  duck.style.left = `${duckX}px`;
+  duck.style.top = `${duckY}px`;
 }
-
-
-// Generate a random position for the invisible duck
-const duckX = Math.floor(Math.random() * gameContainer.offsetWidth);
-const duckY = Math.floor(Math.random() * gameContainer.offsetHeight);
 
 gameContainer.addEventListener('mousemove', (event) => {
     // Calculate the distance between the mouse cursor and the duck's position
