@@ -2,9 +2,6 @@ const gameContainer = document.getElementById('game-container');
 const duckSound = document.getElementById('duck-sound');
 const duck = document.getElementById('ducky_img');
 
-// Make the image visible
-duck.style.display = 'block';
-
 function change_duck_location() {
   const duckRect = duck.getBoundingClientRect();
 
@@ -18,6 +15,12 @@ function change_duck_location() {
   // Set the position of the duck
   duck.style.left = `${duckX}px`;
   duck.style.top = `${duckY}px`;
+
+  // Make the image visible when clicked
+  duck.addEventListener('click', () => {
+    // Make the image visible
+    duck.style.display = 'block';
+  });
 }
 
 gameContainer.addEventListener('mousemove', (event) => {
