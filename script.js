@@ -18,9 +18,11 @@ function change_duck_location() {
 
   // Make the image visible when clicked
   duck.addEventListener('click', () => {
-    // Make the image visible
-    duck.style.display = 'block';
+      duck.style.display = 'none';
   });
+
+  // Append the image to the container
+//    gameContainer.appendChild(duck);
 }
 
 gameContainer.addEventListener('mousemove', (event) => {

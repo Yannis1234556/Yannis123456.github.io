@@ -21,7 +21,8 @@ body {
   top: 0px;
   width: 150px;
   height: 150px;
-  display: none; /* Initially hide the image */
+  cursor: pointer;
+  display: block; /* Initially hide the image */
 }
 
 #start_btn {
