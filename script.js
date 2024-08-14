@@ -3,6 +3,8 @@ const quackSound = document.getElementById('quack-sound');
 const duckSound = document.getElementById('duck-sound');
 const duck = document.getElementById('ducky_img');
 
+var duckX, duckY;
+
 function change_duck_location() {
   const duckRect = duck.getBoundingClientRect();
 
@@ -10,8 +12,8 @@ function change_duck_location() {
   const curY = duckRect.top;  // Y position if left-top corner is (0,0)
 
   // Generate a random position for the invisible duck
-  const duckX = Math.floor(Math.random() * gameContainer.offsetWidth);
-  const duckY = Math.floor(Math.random() * gameContainer.offsetHeight);
+  duckX = Math.floor(Math.random() * gameContainer.offsetWidth);
+  duckY = Math.floor(Math.random() * gameContainer.offsetHeight);
 
   // Set the position of the duck
   duck.style.left = `${duckX}px`;
