@@ -1,4 +1,5 @@
 const gameContainer = document.getElementById('game-container');
+const quackSound = document.getElementById('quack-sound');
 const duckSound = document.getElementById('duck-sound');
 const duck = document.getElementById('ducky_img');
 
@@ -19,7 +20,7 @@ function change_duck_location() {
   // Make the image visible when clicked
   duck.addEventListener('click', () => {
       duck.style.display = 'none';
-      duckSound.play();
+      quackSound.play();
   });
 
   // Append the image to the container
