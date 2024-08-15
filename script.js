@@ -39,7 +39,7 @@ gameContainer.addEventListener('mousemove', (event) => {
     const maxDistance = Math.sqrt(
       Math.pow(gameContainer.offsetWidth, 2) + Math.pow(gameContainer.offsetHeight, 2)
     );
-    const volume = 1 - distance / maxDistance;
+    const volume = Math.exp(-distance / maxDistance * 5);
     duckSound.volume = volume;
     duckSound.play();
 });
