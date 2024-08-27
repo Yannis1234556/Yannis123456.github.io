@@ -5,6 +5,19 @@ const duck = document.getElementById('ducky_img');
 
 var duckX, duckY;
 
+// Make the image visible when clicked
+duck.addEventListener('click', () => {
+    console.log("hello");
+    duck.style.display = 'block';
+    quackSound.play();
+});
+
+function duckClicked() {
+    console.log("hello");
+    duck.style.opacity = '1.0';
+    quackSound.play();
+}
+
 function change_duck_location() {
   const duckRect = duck.getBoundingClientRect();
 
@@ -19,12 +32,7 @@ function change_duck_location() {
   duck.style.left = `${duckX}px`;
   duck.style.top = `${duckY}px`;
 
-  // Make the image visible when clicked
-  duck.addEventListener('click', () => {
-      duck.style.display = 'none';
-      quackSound.play();
-  });
-
+  
   // Append the image to the container
 //    gameContainer.appendChild(duck);
 }

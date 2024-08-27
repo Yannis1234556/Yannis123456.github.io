@@ -9,7 +9,9 @@
 
 <body>
   <div id="game-container">
-    <img id="ducky_img" src="ducky.png">
+    <button id="ducky_btn" onclick="duckClicked()">
+        <img id="ducky_img" src="ducky.png" style="opacity: 0;">
+    </button>
     <button id="start_btn" onclick="change_duck_location()">Start</button>
     <audio id="quack-sound" src="quack_audio.mp3"></audio>
     <audio id="duck-sound" src="duck_audio.mp3"></audio>
