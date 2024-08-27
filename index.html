@@ -8,11 +8,15 @@
 </head>
 
 <body>
-  <div id="game-container">
+  <div id="start-dialog">
+    <span id="tip">** Turn up the volume to play this game **</span>
+    <p id="intro">Find the hidden object by moving your cursor around. The closer you get to it, the louder the sound will be.</p>
+    <button id="start_btn" onclick="startGame(event)">Start</button>
+  </div>
+  <div id="game-container" style="display: none;">
     <button id="ducky_btn" onclick="duckClicked()">
-        <img id="ducky_img" src="ducky.png" style="opacity: 0;">
+      <img id="ducky_img" src="ducky.png" style="opacity: 0;">
     </button>
-    <button id="start_btn" onclick="change_duck_location()">Start</button>
     <audio id="quack-sound" src="quack_audio.mp3"></audio>
     <audio id="duck-sound" src="duck_audio.mp3"></audio>
   </div>
