@@ -35,10 +35,12 @@ body {
 #game-container {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: flex; 
+  position: relative;
   background-color: #fffdf5;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  overflow: hidden;
 }
 
 #ducky_img {
