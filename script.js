@@ -2,9 +2,9 @@ const gameContainer = document.getElementById('game-container');
 const quackSound = document.getElementById('quack-sound');
 const duckSound = document.getElementById('duck-sound');
 const duck = document.getElementById('ducky_img');
-const ronnie = document.getElementById('ronnie_img');
+const ronnie = document.getElementById('ronnie_btn');
 const ronnieResultSound = document.getElementById('ronnie-result');
-const samson = document.getElementById('samson_img');
+const samson = document.getElementById('samson_btn');
 const samsonResultSound = document.getElementById('samson-result');
 
 var X, Y;
@@ -30,7 +30,7 @@ gameContainer.addEventListener('mousemove', (event) => {
   const maxDistance = Math.sqrt(
     Math.pow(gameContainer.offsetWidth, 2) + Math.pow(gameContainer.offsetHeight, 2)
   );
-  const volume = Math.exp(-distance / maxDistance * 5);
+  const volume = Math.exp(-distance / maxDistance * 9);
   if (isRonnieMode && !gameEnded) {
     document.getElementById('ronnie-sound').volume = volume;
     document.getElementById('ronnie-sound').play();
@@ -74,7 +74,7 @@ function duckClicked(isRonnie) {
     setTimeout(() => {
       ronnieResultSound.play();
     }, 1000);
-    restartTimeout = setTimeout(resetGame, 2000);
+    restartTimeout = setTimeout(resetGame, 2500);
   } else if ((isRonnie == 0) && !isRonnieMode) {
     document.getElementById('samson-sound').pause();
     document.getElementById('samson_btn').style.opacity = '1.0';
@@ -83,7 +83,7 @@ function duckClicked(isRonnie) {
     setTimeout(() => {
       samsonResultSound.play();
     }, 1000);
-    restartTimeout = setTimeout(resetGame, 2000);
+    restartTimeout = setTimeout(resetGame, 2500);
   } else {
     return;
   }
