@@ -4,21 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Find the Invisible Duck</title>
+  <title>Find the Invisible ???</title>
 </head>
 
 <body>
   <div id="start-dialog">
     <span id="tip">** Turn up the volume to play this game **</span>
-    <p id="intro">Find the hidden object by moving your cursor around. The closer you get to it, the louder the sound will be.</p>
+    <div id="hiddenPerson_dropdown">
+      <label for="hiddenPerson">Find the </label>
+      <select name="hiddenPerson" id="hiddenPerson_options">
+        <option value="ronnie">Ronnie</option>
+        <option value="samson">Samson</option>
+      </select>
+    </div>
+    <p id="intro">Find the hidden person by moving your cursor around. The closer you get to them, the louder the sound will be.</p>
     <button id="start_btn" onclick="startGame(event)">Start</button>
   </div>
   <div id="game-container" style="display: none;">
-    <button id="ducky_btn" onclick="duckClicked()">
-      <img id="ducky_img" src="ducky.png" style="opacity: 0;">
+    
+    <button class="find_btn" id="ronnie_btn" onclick="duckClicked(1)" style="opacity: 0;">
+      <img class="find_img" id="ronnie_img" src="ronnie.png" >
     </button>
+    <button class="find_btn" id="samson_btn" onclick="duckClicked(0)" style="opacity: 0;">
+      <img class="find_img" id="samson_img" src="samson.png">
+    </button> 
+   
+    <!-- <button id="ducky_btn" onclick="duckClicked()">
+      <img class="find_img" id="ducky_img" src="ducky.png" style="opacity: 0;">
+    </button> -->
     <audio id="quack-sound" src="quack_audio.mp3"></audio>
     <audio id="duck-sound" src="duck_audio.mp3"></audio>
+
+    <audio id="ronnie-sound" src="ronnie_playing.mp3"></audio>
+    <audio id="ronnie-result" src="ronnie_omg.mp3"></audio>
+
+    <audio id="samson-sound" src="samson_playing.mp3"></audio>
+    <audio id="samson-result" src="samson_yay.mp3"></audio>
   </div>
 
   <script src="script.js"></script>

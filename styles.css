@@ -28,6 +28,10 @@ body {
   font-weight: 1000;
 }
 
+#hiddenPerson_dropdown {
+  padding: 5px;
+}
+
 #intro {
   text-align: center;
 }
@@ -43,16 +47,37 @@ body {
   overflow: hidden;
 }
 
-#ducky_img {
+.find_btn {
+  border: none;
+  background-color: transparent;
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 150px;
-  height: 150px;
-  /*cursor: pointer;
-  /* display: none; /* Initially hide the image */
-  transition: 0.8s ease-in-out;
+  /* cursor: grab; */
 }
+.find_img {
+  /* position: absolute; */
+  /* left: 0px;
+  top: 0px; */
+  width: 50px;
+  height: 60px;
+  /* cursor: grab; */
+  /* display: none; /* Initially hide the image */
+  transition: 1s ease-in-out;
+}
+
+@keyframes sway {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px) scale(1); }
+  20% { transform: translateX(10px) scale(2); }
+  30% { transform: translateX(-10px) scale(3); }
+  40% { transform: translateX(10px) scale(4); } 
+  50% { transform: translateX(-10px) scale(5); }
+  60% { transform: translateX(10px) scale(6); }
+  70% { transform: translateX(-10px) scale(7); }
+  80% { transform: translateX(10px) scale(8); }
+  90% { transform: translateX(-10px) scale(9); }
+  100% { transform: translateX(0) scale(10); }
+}
+
 
 #start_btn {
   display: flex;
