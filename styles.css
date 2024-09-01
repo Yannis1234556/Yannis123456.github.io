@@ -48,8 +48,8 @@ body {
 }
 
 .find_btn {
-  width: 70px; /* Set the width of the button */
-  height: 70px;
+  width: 50px; /* Set the width of the button */
+  height: 50px;
   border: none;
   background-color: transparent;
   position: absolute;
